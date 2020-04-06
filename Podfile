@@ -12,4 +12,8 @@ target 'Authorization' do
 
   pod 'GoogleSignIn'
 
+  pod 'Bolts'
+  pod 'FBSDKCoreKit' 
+  pod 'FBSDKLoginKit'
+
 end

@@ -47,14 +47,24 @@
                                     <action selector="googleActionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0t2-MK-act"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMm-Jv-q5h">
+                                <rect key="frame" x="174" y="171" width="67" height="30"/>
+                                <state key="normal" title="Facebook"/>
+                                <connections>
+                                    <action selector="facebookActionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EI4-MZ-pfU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="IMm-Jv-q5h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="1xs-te-GXe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xjq-0b-ris" secondAttribute="trailing" constant="40" id="7KO-hv-dYa"/>
                             <constraint firstItem="110-W1-jqQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KeP-3H-yrb"/>
+                            <constraint firstItem="IMm-Jv-q5h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="174" id="N2m-HB-BFS"/>
                             <constraint firstItem="xjq-0b-ris" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="aKi-pr-7dN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xjq-0b-ris" secondAttribute="bottom" constant="40" id="dBi-yX-PG3"/>
                             <constraint firstItem="110-W1-jqQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fGo-fB-DdK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IMm-Jv-q5h" secondAttribute="trailing" constant="173" id="wfa-RG-uRy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
