@@ -20,6 +20,7 @@
 		AE3006C024372837007640F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE3006BF24372837007640F5 /* GoogleService-Info.plist */; };
 		AE3006C2243872C5007640F5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3006C1243872C5007640F5 /* Utilities.swift */; };
 		AE3006C5243885B6007640F5 /* Constrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3006C4243885B6007640F5 /* Constrans.swift */; };
+		AEDF297E243C748700CADD18 /* PhoneAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF297D243C748700CADD18 /* PhoneAuthorization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AE3006BF24372837007640F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE3006C1243872C5007640F5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AE3006C4243885B6007640F5 /* Constrans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrans.swift; sourceTree = "<group>"; };
+		AEDF297D243C748700CADD18 /* PhoneAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthorization.swift; sourceTree = "<group>"; };
 		B39D324101332A83E54C3E47 /* Pods-Authorization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authorization.debug.xcconfig"; path = "Target Support Files/Pods-Authorization/Pods-Authorization.debug.xcconfig"; sourceTree = "<group>"; };
 		EE61925EEF20E0938C2774D6 /* Pods-Authorization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authorization.release.xcconfig"; path = "Target Support Files/Pods-Authorization/Pods-Authorization.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 				AE3006B924370F92007640F5 /* LoginViewController.swift */,
 				AE3006BB24370FB4007640F5 /* SingUpViewController.swift */,
 				AE3006BD24370FC3007640F5 /* HomeViewController.swift */,
+				AEDF297D243C748700CADD18 /* PhoneAuthorization.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				AE3006A524370E38007640F5 /* AppDelegate.swift in Sources */,
 				AE3006C5243885B6007640F5 /* Constrans.swift in Sources */,
 				AE3006A724370E38007640F5 /* SceneDelegate.swift in Sources */,
+				AEDF297E243C748700CADD18 /* PhoneAuthorization.swift in Sources */,
 				AE3006BE24370FC3007640F5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

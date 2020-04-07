@@ -18,16 +18,13 @@ class ViewController: UIViewController,GIDSignInDelegate {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var googleLogin: UIButton!
+    @IBOutlet weak var numberOu: UITextField!
+    @IBOutlet weak var otpOu: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.delegate = self
-       
-        
-        
-//        let googleButton = GIDSignInButton()
-//        googleButton.frame = CGRect(x:16,y:50,width: view.frame.width - 32,height: 50)
-//        view.addSubview(googleButton)
     }
+    
     @IBAction func facebookActionLogin(_ sender: Any) {
         let loginManager = LoginManager()
                loginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
@@ -43,7 +40,6 @@ class ViewController: UIViewController,GIDSignInDelegate {
         
                    let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
                    
-                   // Perform login by calling Firebase APIs
                    Auth.auth().signIn(with: credential, completion: { (user, error) in
                        if let error = error {
                            print("Login error: \(error.localizedDescription)")
@@ -92,5 +88,9 @@ class ViewController: UIViewController,GIDSignInDelegate {
         
     }
 
+    @IBAction func sendNumber(_ sender: Any) {
+    }
+    @IBAction func sendOtp(_ sender: Any) {
+    }
 }
 

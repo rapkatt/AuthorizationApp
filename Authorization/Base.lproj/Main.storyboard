@@ -41,8 +41,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="110-W1-jqQ">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="182" y="433" width="50" height="30"/>
+                                <state key="normal" title="Google"/>
                                 <connections>
                                     <action selector="googleActionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0t2-MK-act"/>
                                 </connections>
@@ -54,16 +54,27 @@
                                     <action selector="facebookActionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EI4-MZ-pfU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbY-0d-SJ4">
+                                <rect key="frame" x="138" y="291" width="139" height="30"/>
+                                <state key="normal" title="Phone"/>
+                                <connections>
+                                    <segue destination="9JR-zz-ZSZ" kind="show" id="mbf-gd-7Vs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="IMm-Jv-q5h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="1xs-te-GXe"/>
+                            <constraint firstItem="GbY-0d-SJ4" firstAttribute="top" secondItem="IMm-Jv-q5h" secondAttribute="bottom" constant="90" id="6UC-O5-qzV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xjq-0b-ris" secondAttribute="trailing" constant="40" id="7KO-hv-dYa"/>
                             <constraint firstItem="110-W1-jqQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KeP-3H-yrb"/>
                             <constraint firstItem="IMm-Jv-q5h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="174" id="N2m-HB-BFS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GbY-0d-SJ4" secondAttribute="trailing" constant="137" id="Y2i-yE-3jn"/>
                             <constraint firstItem="xjq-0b-ris" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="aKi-pr-7dN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xjq-0b-ris" secondAttribute="bottom" constant="40" id="dBi-yX-PG3"/>
                             <constraint firstItem="110-W1-jqQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fGo-fB-DdK"/>
+                            <constraint firstItem="GbY-0d-SJ4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="138" id="ko0-rp-qah"/>
+                            <constraint firstItem="110-W1-jqQ" firstAttribute="top" secondItem="GbY-0d-SJ4" secondAttribute="bottom" constant="112" id="mxp-C6-LMb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IMm-Jv-q5h" secondAttribute="trailing" constant="173" id="wfa-RG-uRy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -77,6 +88,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="136.60714285714286"/>
+        </scene>
+        <!--Phone Authorization-->
+        <scene sceneID="a46-wI-64X">
+            <objects>
+                <viewController id="9JR-zz-ZSZ" customClass="PhoneAuthorization" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XKM-xy-bwF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lmO-UX-ZBK">
+                                <rect key="frame" x="40" y="84" width="334" height="170"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEI-lY-LhP" userLabel="PhoneNumber">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3B9-bk-KeZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWP-5e-DSP" userLabel="OTP">
+                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mvN-1o-Bu9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="one-time-code"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Pjf-vQ-U8J">
+                                        <rect key="frame" x="0.0" y="140" width="334" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4w-jX-1RU">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                                <state key="normal" title="Send Number"/>
+                                                <connections>
+                                                    <action selector="PhoneSignin:" destination="9JR-zz-ZSZ" eventType="touchUpInside" id="ctr-ah-YM4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpo-6f-D85">
+                                                <rect key="frame" x="195" y="0.0" width="139" height="30"/>
+                                                <state key="normal" title="Send OTP"/>
+                                                <connections>
+                                                    <action selector="verifyOTP:" destination="9JR-zz-ZSZ" eventType="touchUpInside" id="10k-Fp-FDw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YEI-lY-LhP" firstAttribute="top" secondItem="lmO-UX-ZBK" secondAttribute="top" id="310-BL-SvU"/>
+                                    <constraint firstAttribute="trailing" secondItem="YEI-lY-LhP" secondAttribute="trailing" id="TTb-6j-AD2"/>
+                                    <constraint firstItem="nWP-5e-DSP" firstAttribute="top" secondItem="YEI-lY-LhP" secondAttribute="bottom" constant="20" id="YGE-yd-jRh"/>
+                                    <constraint firstItem="YEI-lY-LhP" firstAttribute="leading" secondItem="lmO-UX-ZBK" secondAttribute="leading" id="doJ-3p-hdP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lmO-UX-ZBK" firstAttribute="top" secondItem="tf0-WQ-Tm8" secondAttribute="top" constant="40" id="2P3-Tl-Ahr"/>
+                            <constraint firstItem="tf0-WQ-Tm8" firstAttribute="trailing" secondItem="lmO-UX-ZBK" secondAttribute="trailing" constant="40" id="57U-C9-xOc"/>
+                            <constraint firstItem="lmO-UX-ZBK" firstAttribute="leading" secondItem="tf0-WQ-Tm8" secondAttribute="leading" constant="40" id="UlR-8X-2ff"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tf0-WQ-Tm8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0gB-vZ-M8X"/>
+                    <connections>
+                        <outlet property="otpOu" destination="nWP-5e-DSP" id="md4-zt-zR6"/>
+                        <outlet property="phoneOu" destination="YEI-lY-LhP" id="F6e-7M-9fh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="52K-oa-cgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="867.85714285714278"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="txK-fd-mvO">
