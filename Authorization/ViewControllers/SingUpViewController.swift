@@ -1,4 +1,3 @@
-
 import UIKit
 import FirebaseAuth
 import Firebase
@@ -13,6 +12,11 @@ class SingUpViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        Utilities.styleTextField(firstNameTextField)
+        Utilities.styleTextField(lastNameTextField)
+        Utilities.styleTextField(emailTextField)
+        Utilities.styleTextField(passwordTextField)
+        Utilities.styleFilledButton(signUpTextField)
         
     }
     func validateField() -> String? {

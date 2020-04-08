@@ -1,4 +1,3 @@
-
 import UIKit
 import GoogleSignIn
 import Firebase
@@ -7,11 +6,18 @@ class PhoneAuthorization: UIViewController {
     
     @IBOutlet weak var otpOu: UITextField!
     @IBOutlet weak var phoneOu: UITextField!
+    @IBOutlet weak var sendOtpOu: UIButton!
+    @IBOutlet weak var sendNumberOu: UIButton!
     
     let userDefault = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Utilities.styleFilledButton(sendOtpOu)
+        Utilities.styleFilledButton(sendNumberOu)
+        Utilities.styleTextField(otpOu)
+        Utilities.styleTextField(phoneOu)
+        
     }
     
     @IBAction func PhoneSignin(_ sender: Any) {
@@ -20,7 +26,6 @@ class PhoneAuthorization: UIViewController {
         }
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationId, error) in
             if error == nil{
-                //print(verificationId)
                 guard let verifyId = verificationId else{ return }
                 self.userDefault.set(verifyId, forKey: "verificationId")
                 self.userDefault.synchronize()

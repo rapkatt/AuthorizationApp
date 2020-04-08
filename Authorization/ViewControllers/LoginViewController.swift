@@ -1,4 +1,3 @@
-
 import UIKit
 import FirebaseAuth
 
@@ -10,6 +9,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        Utilities.styleTextField(emailTextField)
+        Utilities.styleFilledButton(loginButton)
+        Utilities.styleTextField(passwordTextField)
         
     }
     func validateField() -> String? {

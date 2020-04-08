@@ -1,5 +1,3 @@
-
-
 import UIKit
 import Firebase
 import GoogleSignIn
@@ -11,12 +9,19 @@ class ViewController: UIViewController,GIDSignInDelegate {
     
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var googleLogin: UIButton!
-    @IBOutlet weak var numberOu: UITextField!
-    @IBOutlet weak var otpOu: UITextField!
+    @IBOutlet weak var facebookOu: UIButton!
+    @IBOutlet weak var phoneOU: UIButton!
+    @IBOutlet weak var googleOu: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.delegate = self
+        Utilities.styleHollowButton(signUpButton)
+        Utilities.styleHollowButton(loginButton)
+        Utilities.styleHollowButton(facebookOu)
+        Utilities.styleHollowButton(googleOu)
+        Utilities.styleHollowButton(phoneOU)
+        
     }
     
     @IBAction func facebookActionLogin(_ sender: Any) {

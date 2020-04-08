@@ -15,8 +15,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="vqg-O0-arr">
+                                <rect key="frame" x="40" y="684" width="334" height="158"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMm-Jv-q5h">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="dl3-Az-HzM"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign up with Facebook"/>
+                                        <connections>
+                                            <action selector="facebookActionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EI4-MZ-pfU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="110-W1-jqQ">
+                                        <rect key="frame" x="0.0" y="57" width="334" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="899-O3-I8P"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign up with Google"/>
+                                        <connections>
+                                            <action selector="googleActionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0t2-MK-act"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbY-0d-SJ4">
+                                        <rect key="frame" x="0.0" y="114" width="334" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="OMn-p1-zft"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign up with Phone number"/>
+                                        <connections>
+                                            <segue destination="9JR-zz-ZSZ" kind="show" id="mbf-gd-7Vs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xjq-0b-ris">
-                                <rect key="frame" x="40" y="702" width="334" height="120"/>
+                                <rect key="frame" x="40" y="120" width="334" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEA-W6-46z">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -40,48 +75,24 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="110-W1-jqQ">
-                                <rect key="frame" x="182" y="433" width="50" height="30"/>
-                                <state key="normal" title="Google"/>
-                                <connections>
-                                    <action selector="googleActionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0t2-MK-act"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMm-Jv-q5h">
-                                <rect key="frame" x="174" y="171" width="67" height="30"/>
-                                <state key="normal" title="Facebook"/>
-                                <connections>
-                                    <action selector="facebookActionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EI4-MZ-pfU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbY-0d-SJ4">
-                                <rect key="frame" x="138" y="291" width="139" height="30"/>
-                                <state key="normal" title="Phone"/>
-                                <connections>
-                                    <segue destination="9JR-zz-ZSZ" kind="show" id="mbf-gd-7Vs"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.16470588235294117" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="IMm-Jv-q5h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="1xs-te-GXe"/>
-                            <constraint firstItem="GbY-0d-SJ4" firstAttribute="top" secondItem="IMm-Jv-q5h" secondAttribute="bottom" constant="90" id="6UC-O5-qzV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vqg-O0-arr" secondAttribute="bottom" constant="20" id="1Wt-c2-EBZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xjq-0b-ris" secondAttribute="trailing" constant="40" id="7KO-hv-dYa"/>
-                            <constraint firstItem="110-W1-jqQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KeP-3H-yrb"/>
-                            <constraint firstItem="IMm-Jv-q5h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="174" id="N2m-HB-BFS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GbY-0d-SJ4" secondAttribute="trailing" constant="137" id="Y2i-yE-3jn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vqg-O0-arr" secondAttribute="trailing" constant="40" id="Kcw-Fs-WG3"/>
                             <constraint firstItem="xjq-0b-ris" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="aKi-pr-7dN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xjq-0b-ris" secondAttribute="bottom" constant="40" id="dBi-yX-PG3"/>
-                            <constraint firstItem="110-W1-jqQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fGo-fB-DdK"/>
-                            <constraint firstItem="GbY-0d-SJ4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="138" id="ko0-rp-qah"/>
-                            <constraint firstItem="110-W1-jqQ" firstAttribute="top" secondItem="GbY-0d-SJ4" secondAttribute="bottom" constant="112" id="mxp-C6-LMb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IMm-Jv-q5h" secondAttribute="trailing" constant="173" id="wfa-RG-uRy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xjq-0b-ris" secondAttribute="bottom" constant="622" id="dBi-yX-PG3"/>
+                            <constraint firstItem="vqg-O0-arr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="iHo-yy-m7X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="mT4-6A-3gK"/>
                     <connections>
+                        <outlet property="facebookOu" destination="IMm-Jv-q5h" id="8Wf-TM-6MN"/>
+                        <outlet property="googleOu" destination="110-W1-jqQ" id="Lha-BX-vcE"/>
                         <outlet property="loginButton" destination="x6j-da-yH0" id="JOa-3X-BXX"/>
+                        <outlet property="phoneOU" destination="GbY-0d-SJ4" id="TYT-Dx-8Vv"/>
                         <outlet property="signUpButton" destination="kEA-W6-46z" id="83y-XX-FGe"/>
                     </connections>
                 </viewController>
@@ -144,7 +155,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.9125702247191011" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lmO-UX-ZBK" firstAttribute="top" secondItem="tf0-WQ-Tm8" secondAttribute="top" constant="40" id="2P3-Tl-Ahr"/>
                             <constraint firstItem="tf0-WQ-Tm8" firstAttribute="trailing" secondItem="lmO-UX-ZBK" secondAttribute="trailing" constant="40" id="57U-C9-xOc"/>
@@ -156,6 +167,8 @@
                     <connections>
                         <outlet property="otpOu" destination="nWP-5e-DSP" id="md4-zt-zR6"/>
                         <outlet property="phoneOu" destination="YEI-lY-LhP" id="F6e-7M-9fh"/>
+                        <outlet property="sendNumberOu" destination="R4w-jX-1RU" id="Iad-QV-h1T"/>
+                        <outlet property="sendOtpOu" destination="Vpo-6f-D85" id="CCq-Ik-WZP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52K-oa-cgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -206,7 +219,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.16470588235294117" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="n7s-sQ-gqz" firstAttribute="trailing" secondItem="dAt-nA-P86" secondAttribute="trailing" constant="40" id="6Va-t0-sKk"/>
                             <constraint firstItem="dAt-nA-P86" firstAttribute="top" secondItem="n7s-sQ-gqz" secondAttribute="top" constant="40" id="OlL-iE-irw"/>
@@ -241,7 +254,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.16470588235294117" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="WMK-mk-PZe" firstAttribute="centerX" secondItem="YC8-aP-0cZ" secondAttribute="centerX" id="93h-TT-3JT"/>
                             <constraint firstItem="WMK-mk-PZe" firstAttribute="centerY" secondItem="YC8-aP-0cZ" secondAttribute="centerY" id="hWn-B7-uh9"/>
@@ -311,7 +324,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.16470588235294117" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="UpK-To-DGT" firstAttribute="trailing" secondItem="Q6x-bp-LQE" secondAttribute="trailing" constant="40" id="5rj-SK-NGg"/>
                             <constraint firstItem="Q6x-bp-LQE" firstAttribute="leading" secondItem="UpK-To-DGT" secondAttribute="leading" constant="40" id="LdJ-GK-CFq"/>
@@ -341,6 +354,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DL3-ex-Wza">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.12941176470588234" green="0.16470588235294117" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a7s-DB-XOR">
