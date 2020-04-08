@@ -1,17 +1,10 @@
-//
-//  SingUpViewController.swift
-//  Authorization
-//
-//  Created by Baudunov Rapkat on 4/3/20.
-//  Copyright © 2020 Baudunov Rapkat. All rights reserved.
-//
 
 import UIKit
 import FirebaseAuth
 import Firebase
 
 class SingUpViewController: UIViewController {
-
+    
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -20,8 +13,7 @@ class SingUpViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     func validateField() -> String? {
         
@@ -60,7 +52,7 @@ class SingUpViewController: UIViewController {
                     self.showError("Error creating user")
                 }else{
                     
-                let db = Firestore.firestore()
+                    let db = Firestore.firestore()
                     db.collection("users").addDocument(data: ["firstname": firstName!, "lastname": lastName!, "uid": result!.user.uid ]){(error) in
                         
                         if error != nil{

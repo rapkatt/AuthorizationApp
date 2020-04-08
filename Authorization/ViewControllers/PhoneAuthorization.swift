@@ -1,10 +1,3 @@
-//
-//  PhoneAuthorization.swift
-//  Authorization
-//
-//  Created by Baudunov Rapkat on 4/7/20.
-//  Copyright © 2020 Baudunov Rapkat. All rights reserved.
-//
 
 import UIKit
 import GoogleSignIn
@@ -32,7 +25,7 @@ class PhoneAuthorization: UIViewController {
                 self.userDefault.set(verifyId, forKey: "verificationId")
                 self.userDefault.synchronize()
             }else{
-                print("error",error?.localizedDescription)
+                print("error",error?.localizedDescription as Any)
             }
         }
     }
